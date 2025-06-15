@@ -13,6 +13,7 @@ export default function Hero() {
       }}
     >
       <div className="hero-content">
+        <button>DISCOVER US!</button>
         <div className="social-icons">
           <a aria-label="Join mailing list"  href="/#email"><FaEnvelope/></a>
           <a aria-label="Instagram" target="_blank" rel="noreferrer" href="https://instagram.com/"><FaInstagram/></a>
