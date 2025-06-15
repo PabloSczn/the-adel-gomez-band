@@ -33,7 +33,7 @@ export default function Hero() {
             bottom: '2rem',
             left: '50%',
             transform: 'translateX(-50%)',
-            fontSize: '2rem',
+            fontSize: '1.75rem',
             color: 'rgba(255,255,255,0.8)',
             animation: 'bounce 2s infinite'
             }}
