@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   width: 100%;
   height: 100%;
@@ -99,12 +103,33 @@ button:hover {
   margin: 0.5rem 0 1.5rem;
 }
 
-.social-icons {
-  margin-top: 2rem;
+.hero-socials {
+  position: absolute;
+  top: 4.2rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 1rem;
-  justify-content: center;
   font-size: 1.2rem;
+  z-index: 20;
+}
+
+.hero-socials a {
+  color: rgba(255,255,255,0.8);
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-socials a svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.hero-socials a:hover {
+  transform: translateY(-3px);
+  color: #fff;
 }
 
 .footer {
@@ -118,4 +143,10 @@ button:hover {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
 }
