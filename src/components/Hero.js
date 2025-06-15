@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaEnvelope, FaInstagram, FaFacebookF, FaXTwitter, FaSpotify, FaApple, FaYoutube } from 'react-icons/fa6';
 import bg from '../assets/hero-background.jpg';
 
 export default function Hero() {
@@ -12,18 +13,14 @@ export default function Hero() {
       }}
     >
       <div className="hero-content">
-        <p>NEW ALBUM</p>
-        <h1>MIXED EMOTIONS OUT NOW!</h1>
-        <button>LISTEN NOW</button>
         <div className="social-icons">
-          {/* Replace with real icon components or <img> tags */}
-          <a href="#email">📧</a>
-          <a href="#instagram">📸</a>
-          <a href="#facebook">📘</a>
-          <a href="#twitter">🐦</a>
-          <a href="#spotify">🎵</a>
-          <a href="#apple">🍎</a>
-          <a href="#youtube">▶️</a>
+          <a aria-label="Join mailing list"  href="/#email"><FaEnvelope/></a>
+          <a aria-label="Instagram" target="_blank" rel="noreferrer" href="https://instagram.com/"><FaInstagram/></a>
+          <a aria-label="Facebook"  target="_blank" rel="noreferrer" href="https://facebook.com/"><FaFacebookF/></a>
+          <a aria-label="X / Twitter" target="_blank" rel="noreferrer" href="https://twitter.com/"><FaXTwitter/></a>
+          <a aria-label="Spotify"   target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/"><FaSpotify/></a>
+          <a aria-label="Apple Music" target="_blank" rel="noreferrer" href="https://music.apple.com/us/artist/"><FaApple/></a>
+          <a aria-label="YouTube"  target="_blank" rel="noreferrer" href="https://youtube.com/user/"><FaYoutube/></a>
         </div>
       </div>
     </section>
