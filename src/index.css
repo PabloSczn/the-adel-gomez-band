@@ -149,3 +149,120 @@ button:hover {
   40% { transform: translateX(-50%) translateY(-10px); }
   60% { transform: translateX(-50%) translateY(-5px); }
 }
+
+/* About Section */
+.about {
+  background: #111;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.about-image,
+.about-text {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* fade on right edge */
+.about-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(17,17,17,0) 0%, #111 100%);
+  pointer-events: none;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 4.5rem;
+
+  margin-top: 10vh;
+  max-width: 870px;
+}
+
+/* headings & paragraphs unchanged */
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+.about-text h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.75rem;
+  color: #d57d33;
+  text-align: center;
+}
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 501;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-image {
+    height: 50vh;
+  }
+  .about-text {
+    height: 50vh;
+    padding: 2rem;
+  }
+  .about-text h2 {
+    text-align: center;
+  }
+}
+
+/* Stream Now button in About */
+.stream-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 45px;
+  border: 3px solid #fff;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.stream-button:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-2px);
+}
