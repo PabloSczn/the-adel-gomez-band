@@ -46,14 +46,15 @@ button:hover {
 
 .nav-list {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
 }
 
 .nav-list li a {
   font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: 1rem;
+  letter-spacing: 0.07em;
+  font-size: 1.2rem;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
@@ -62,10 +63,10 @@ button:hover {
   opacity: .55;
 }
 
-
 .logo {
-  font-weight: bold;
-  letter-spacing: 0.2em;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
   color: rgba(255,255,255,0.6);
 }
 
