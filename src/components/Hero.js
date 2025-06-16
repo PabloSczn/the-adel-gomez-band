@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaInstagram, FaFacebookF, FaXTwitter, FaSpotify, FaApple, FaYoutube } from 'react-icons/fa6';
+import { FaEnvelope, FaInstagram, FaSpotify, FaApple, FaYoutube } from 'react-icons/fa6';
 import { FaChevronDown } from 'react-icons/fa';
 import bg from '../assets/hero-background.jpg';
 
@@ -15,12 +15,10 @@ export default function Hero() {
     >
         <div className="hero-socials">
             <a aria-label="Join mailing list"  href="/#email"><FaEnvelope/></a>
-            <a aria-label="Instagram" target="_blank" rel="noreferrer" href="https://instagram.com/"><FaInstagram/></a>
-            <a aria-label="Facebook"  target="_blank" rel="noreferrer" href="https://facebook.com/"><FaFacebookF/></a>
-            <a aria-label="X / Twitter" target="_blank" rel="noreferrer" href="https://twitter.com/"><FaXTwitter/></a>
-            <a aria-label="Spotify"   target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/"><FaSpotify/></a>
-            <a aria-label="Apple Music" target="_blank" rel="noreferrer" href="https://music.apple.com/us/artist/"><FaApple/></a>
-            <a aria-label="YouTube"  target="_blank" rel="noreferrer" href="https://youtube.com/user/"><FaYoutube/></a>
+            <a aria-label="Instagram" target="_blank" rel="noreferrer" href="https://www.instagram.com/theadelgomezband/"><FaInstagram/></a>
+            <a aria-label="Spotify"   target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/0ZI5Qs0OqJvcl6b9gotEyS?si=zsJ15M9tSpGw0M53yeFwPg"><FaSpotify/></a>
+            <a aria-label="Apple Music" target="_blank" rel="noreferrer" href="https://music.apple.com/gb/artist/the-adel-gomez-band/1815975339"><FaApple/></a>
+            <a aria-label="YouTube"  target="_blank" rel="noreferrer" href="https://www.youtube.com/@Theadelgomezband"><FaYoutube/></a>
         </div>
         <div className="hero-content">
             <button>DISCOVER US!</button>
