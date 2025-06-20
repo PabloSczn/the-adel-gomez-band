@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useSwipeable } from 'react-swipeable';
 
 import gallery1 from '../assets/gallery1.jpg';
 import gallery2 from '../assets/gallery2.jpg';
 import gallery3 from '../assets/gallery3.jpg';
+import gallery4 from '../assets/gallery4.jpg';
 
-const images = [gallery1, gallery2, gallery3];
+const images = [gallery1, gallery2, gallery3, gallery4];
 
 export default function Gallery() {
   const [index, setIndex] = useState(0);
