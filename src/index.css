@@ -560,6 +560,13 @@ button:hover {
 
   .nav-list li { text-align: center; }
 
+  .nav-list li a {
+    pointer-events: none;
+  }
+  .nav-list.open li a {
+    pointer-events: auto;
+  }
+
   .hero-socials { display: none; }
 
   .nav-list .nav-socials-mobile {
