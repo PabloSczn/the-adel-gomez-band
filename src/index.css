@@ -461,6 +461,7 @@ button:hover {
 
   .footer            { padding: 0.7rem 1rem; }
   .footer-socials    { gap: 1rem; }
+  
 }
 
 /* ---------- 8b. Extra-small devices (≤480 px) ---------- */
@@ -578,6 +579,25 @@ button:hover {
   .nav-list .nav-socials-mobile a:hover {
     transform: translateY(-3px);
     color: #fff;
+  }
+
+  .about-image::after {
+    /* remove the default right-edge settings */
+    top: auto;
+    right: auto;
+
+    /* position at bottom full-width */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* adjust this if you want a taller/shorter fade */
+
+    /* gradient that fades up into the image */
+    background: linear-gradient(
+      to bottom,
+      rgba(17,17,17,0) 0%,
+      #111 100%
+    );
   }
 }
 
