@@ -21,7 +21,9 @@ export default function Hero() {
             <a aria-label="YouTube"  target="_blank" rel="noreferrer" href="https://www.youtube.com/@Theadelgomezband"><FaYoutube/></a>
         </div>
         <div className="hero-content">
+          <a href="#about">
             <button>DISCOVER US!</button>
+          </a>
         </div>
         <a
             href="#about"
