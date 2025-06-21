@@ -1,20 +1,26 @@
 {
   "files": {
     "main.css": "/the-adel-gomez-band/static/css/main.a95803ec.css",
-    "main.js": "/the-adel-gomez-band/static/js/main.b1f60e9a.js",
+    "main.js": "/the-adel-gomez-band/static/js/main.4a26ecdb.js",
+    "static/media/gallery7.jpg": "/the-adel-gomez-band/static/media/gallery7.a1ad7cc63b8e7b8fcac6.jpg",
+    "static/media/gallery6.jpg": "/the-adel-gomez-band/static/media/gallery6.7363db743462a2d54e49.jpg",
     "static/media/gallery2.jpg": "/the-adel-gomez-band/static/media/gallery2.bb8415e9e0431e49f959.jpg",
     "static/media/gallery3.jpg": "/the-adel-gomez-band/static/media/gallery3.8ce30a656daf7d8b5a06.jpg",
     "static/media/gallery1.jpg": "/the-adel-gomez-band/static/media/gallery1.defcc1d893ca704a92fa.jpg",
     "static/media/gallery4.jpg": "/the-adel-gomez-band/static/media/gallery4.4520c0effedc7c071bed.jpg",
+    "static/media/gallery5.jpg": "/the-adel-gomez-band/static/media/gallery5.ee774d38046eb703034a.jpg",
+    "static/media/gallery10.jpg": "/the-adel-gomez-band/static/media/gallery10.57ca90e47108466538e9.jpg",
+    "static/media/gallery9.jpg": "/the-adel-gomez-band/static/media/gallery9.eb6fb4ca33c042ebed5c.jpg",
     "static/media/about.jpg": "/the-adel-gomez-band/static/media/about.f754d6abde571fc3d783.jpg",
+    "static/media/gallery8.jpg": "/the-adel-gomez-band/static/media/gallery8.ae3dc3d8ab05f579aba7.jpg",
     "static/media/logo.jpg": "/the-adel-gomez-band/static/media/logo.3a5ae8d9a6cbfe7a64e5.jpg",
     "static/media/hero-background.jpg": "/the-adel-gomez-band/static/media/hero-background.e197da270e0267a898fa.jpg",
     "index.html": "/the-adel-gomez-band/index.html",
     "main.a95803ec.css.map": "/the-adel-gomez-band/static/css/main.a95803ec.css.map",
-    "main.b1f60e9a.js.map": "/the-adel-gomez-band/static/js/main.b1f60e9a.js.map"
+    "main.4a26ecdb.js.map": "/the-adel-gomez-band/static/js/main.4a26ecdb.js.map"
   },
   "entrypoints": [
     "static/css/main.a95803ec.css",
-    "static/js/main.b1f60e9a.js"
+    "static/js/main.4a26ecdb.js"
   ]
 }
