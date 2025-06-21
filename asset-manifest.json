@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio-website-react/static/css/main.204a5a00.css",
-    "main.js": "/portfolio-website-react/static/js/main.140e3d24.js",
-    "static/media/gallery2.jpg": "/portfolio-website-react/static/media/gallery2.bb8415e9e0431e49f959.jpg",
-    "static/media/gallery3.jpg": "/portfolio-website-react/static/media/gallery3.8ce30a656daf7d8b5a06.jpg",
-    "static/media/gallery1.jpg": "/portfolio-website-react/static/media/gallery1.defcc1d893ca704a92fa.jpg",
-    "static/media/gallery4.jpg": "/portfolio-website-react/static/media/gallery4.4520c0effedc7c071bed.jpg",
-    "static/media/about.jpg": "/portfolio-website-react/static/media/about.f754d6abde571fc3d783.jpg",
-    "static/media/logo.jpg": "/portfolio-website-react/static/media/logo.3a5ae8d9a6cbfe7a64e5.jpg",
-    "static/media/hero-background.jpg": "/portfolio-website-react/static/media/hero-background.e197da270e0267a898fa.jpg",
-    "index.html": "/portfolio-website-react/index.html",
-    "main.204a5a00.css.map": "/portfolio-website-react/static/css/main.204a5a00.css.map",
-    "main.140e3d24.js.map": "/portfolio-website-react/static/js/main.140e3d24.js.map"
+    "main.css": "/the-adel-gomez-band/static/css/main.204a5a00.css",
+    "main.js": "/the-adel-gomez-band/static/js/main.b1f60e9a.js",
+    "static/media/gallery2.jpg": "/the-adel-gomez-band/static/media/gallery2.bb8415e9e0431e49f959.jpg",
+    "static/media/gallery3.jpg": "/the-adel-gomez-band/static/media/gallery3.8ce30a656daf7d8b5a06.jpg",
+    "static/media/gallery1.jpg": "/the-adel-gomez-band/static/media/gallery1.defcc1d893ca704a92fa.jpg",
+    "static/media/gallery4.jpg": "/the-adel-gomez-band/static/media/gallery4.4520c0effedc7c071bed.jpg",
+    "static/media/about.jpg": "/the-adel-gomez-band/static/media/about.f754d6abde571fc3d783.jpg",
+    "static/media/logo.jpg": "/the-adel-gomez-band/static/media/logo.3a5ae8d9a6cbfe7a64e5.jpg",
+    "static/media/hero-background.jpg": "/the-adel-gomez-band/static/media/hero-background.e197da270e0267a898fa.jpg",
+    "index.html": "/the-adel-gomez-band/index.html",
+    "main.204a5a00.css.map": "/the-adel-gomez-band/static/css/main.204a5a00.css.map",
+    "main.b1f60e9a.js.map": "/the-adel-gomez-band/static/js/main.b1f60e9a.js.map"
   },
   "entrypoints": [
     "static/css/main.204a5a00.css",
-    "static/js/main.140e3d24.js"
+    "static/js/main.b1f60e9a.js"
   ]
 }
