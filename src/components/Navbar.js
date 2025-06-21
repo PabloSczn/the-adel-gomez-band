@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
- import {
-   FaEnvelope,
-   FaInstagram,
-   FaSpotify,
-   FaApple,
-   FaYoutube,
- } from 'react-icons/fa6';
+import {
+  FaEnvelope,
+  FaInstagram,
+  FaSpotify,
+  FaApple,
+  FaYoutube,
+} from 'react-icons/fa6';
 
 const links = ['HOME', 'ABOUT', 'GALLERY', 'SHOP'];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Handler to reload the page
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    window.location.reload();
+  };
 
   return (
     <nav className="navbar">
@@ -32,7 +38,11 @@ export default function Navbar() {
       <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
         {links.slice(0, 2).map(label => (
           <li key={label}>
-            <a href={`#${label.toLowerCase()}`}>{label}</a>
+            {label === 'HOME' ? (
+              <a href="#" onClick={handleHomeClick}>{label}</a>
+            ) : (
+              <a href={`#${label.toLowerCase()}`}>{label}</a>
+            )}
           </li>
         ))}
 
