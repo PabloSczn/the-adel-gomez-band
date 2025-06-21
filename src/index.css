@@ -423,6 +423,8 @@ button:hover {
   margin: 0;
   cursor: pointer;
   z-index: 30;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   transition: transform 0.3s ease;
 }
 .bar {
@@ -435,6 +437,12 @@ button:hover {
 .hamburger.open .top    { transform: translateY(7.5px) rotate(45deg); }
 .hamburger.open .middle { opacity: 0; }
 .hamburger.open .bottom { transform: translateY(-7.5px) rotate(-45deg); }
+.hamburger:focus,
+.hamburger:active {
+  /* no outline or background change when tapped/focused */
+  outline: none;
+  background: transparent;
+}
 
 /* ============================================================= */
 /* =================== 8. GLOBAL MEDIA QUERIES ================= */
