@@ -14,7 +14,7 @@ export default function Hero() {
       }}
     >
         <div className="hero-socials">
-            <a aria-label="Join mailing list"  href="/#email"><FaEnvelope/></a>
+            <a aria-label="Email"  href="mailto:theadelgomezband@gmail.com"><FaEnvelope/></a>
             <a aria-label="Instagram" target="_blank" rel="noreferrer" href="https://www.instagram.com/theadelgomezband/"><FaInstagram/></a>
             <a aria-label="Spotify"   target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/0ZI5Qs0OqJvcl6b9gotEyS?si=zsJ15M9tSpGw0M53yeFwPg"><FaSpotify/></a>
             <a aria-label="Apple Music" target="_blank" rel="noreferrer" href="https://music.apple.com/gb/artist/the-adel-gomez-band/1815975339"><FaApple/></a>

@@ -25,7 +25,7 @@ export default function Footer() {
 
       {/* Social links */}
       <div className="footer-socials">
-        <a aria-label="Join mailing list" href="/#email">
+        <a aria-label="Email" href="mailto:theadelgomezband@gmail.com">
           <FaEnvelope />
         </a>
         <a
