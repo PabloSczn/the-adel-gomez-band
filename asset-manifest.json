@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/the-adel-gomez-band/static/css/main.2d2def59.css",
-    "main.js": "/the-adel-gomez-band/static/js/main.a5edc2dc.js",
+    "main.js": "/the-adel-gomez-band/static/js/main.5fd1a808.js",
     "static/media/gallery7.jpg": "/the-adel-gomez-band/static/media/gallery7.a1ad7cc63b8e7b8fcac6.jpg",
     "static/media/gallery6.jpg": "/the-adel-gomez-band/static/media/gallery6.7363db743462a2d54e49.jpg",
     "static/media/gallery2.jpg": "/the-adel-gomez-band/static/media/gallery2.bb8415e9e0431e49f959.jpg",
@@ -14,10 +14,10 @@
     "static/media/hero-background.jpg": "/the-adel-gomez-band/static/media/hero-background.e197da270e0267a898fa.jpg",
     "index.html": "/the-adel-gomez-band/index.html",
     "main.2d2def59.css.map": "/the-adel-gomez-band/static/css/main.2d2def59.css.map",
-    "main.a5edc2dc.js.map": "/the-adel-gomez-band/static/js/main.a5edc2dc.js.map"
+    "main.5fd1a808.js.map": "/the-adel-gomez-band/static/js/main.5fd1a808.js.map"
   },
   "entrypoints": [
     "static/css/main.2d2def59.css",
-    "static/js/main.a5edc2dc.js"
+    "static/js/main.5fd1a808.js"
   ]
 }
