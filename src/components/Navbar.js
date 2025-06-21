@@ -12,7 +12,7 @@ const links = ['HOME', 'ABOUT', 'GALLERY', 'SHOP'];
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Handler to reload the page
+  // Handler to reload the page on Home click
   const handleHomeClick = (e) => {
     e.preventDefault();
     window.location.reload();
@@ -39,14 +39,14 @@ export default function Navbar() {
         {links.slice(0, 2).map(label => (
           <li key={label}>
             {label === 'HOME' ? (
-              <a href="#" onClick={handleHomeClick}>{label}</a>
+              <a href="/" onClick={handleHomeClick}>{label}</a>
             ) : (
               <a href={`#${label.toLowerCase()}`}>{label}</a>
             )}
           </li>
         ))}
 
-        {/* desktop logo */}
+        {/* Desktop logo */}
         <li className="logo desktop-logo">THE ADEL GOMEZ BAND</li>
 
         {links.slice(2).map(label => {
