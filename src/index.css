@@ -459,7 +459,7 @@ button:hover {
   .gallery-arrow     { width: 2.75rem; height: 2.75rem;
                        font-size: 1.25rem; margin: 0 .75rem; }
 
-  .footer            { padding: 1.5rem 1rem; }
+  .footer            { padding: 0.7rem 1rem; }
   .footer-socials    { gap: 1rem; }
 }
 
