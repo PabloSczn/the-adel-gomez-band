@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 import gallery1 from '../assets/gallery1.jpg';
@@ -13,10 +13,17 @@ const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gall
 
 export default function Gallery() {
   const [index, setIndex] = useState(0);
-  const prevSlide = () =>
-    setIndex((i) => (i - 1 + images.length) % images.length);
-  const nextSlide = () =>
-    setIndex((i) => (i + 1) % images.length);
+
+  // PRELOAD
+  useEffect(() => {
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  const prevSlide = () => setIndex(i => (i - 1 + images.length) % images.length);
+  const nextSlide = () => setIndex(i => (i + 1) % images.length);
 
   const handlers = useSwipeable({
     onSwipedLeft:  nextSlide,
@@ -28,26 +35,15 @@ export default function Gallery() {
   return (
     <section id="gallery" className="gallery" {...handlers}>
       <h2>Gallery</h2>
-
       <div className="gallery-container">
-        <button
-        className="gallery-arrow"
-        onClick={prevSlide}
-        aria-label="Previous image"
-        >
-        &#10094; {/* ❮ */}
+        <button className="gallery-arrow" onClick={prevSlide} aria-label="Previous image">
+          &#10094;
         </button>
-
         <div className="gallery-card">
           <img src={images[index]} alt={`Gallery ${index + 1}`} />
         </div>
-
-        <button
-        className="gallery-arrow"
-        onClick={nextSlide}
-        aria-label="Next image"
-        >
-        &#10095; {/* ❯ */}
+        <button className="gallery-arrow" onClick={nextSlide} aria-label="Next image">
+          &#10095;
         </button>
       </div>
     </section>
