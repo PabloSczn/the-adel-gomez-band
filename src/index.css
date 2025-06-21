@@ -424,6 +424,11 @@ button:hover {
   .hero-content button,
   .stream-button     { padding: 10px 35px; font-size: 0.9rem; }
 
+  .hero-content {
+    top: auto;
+    bottom: 10%;
+  }
+
   .gallery-card      { height: 55vh; }
   .about-image       { height: 40vh; }
 }
@@ -520,7 +525,7 @@ button:hover {
     position: relative;   /* stays in flow */
     margin: 0;            /* flex justify-content: center will center it */
     z-index: 20;          /* so it's above the menu if you ever need it */
-    width: 80%;
+    width: 77%;
     text-align: center;
   }
 
@@ -556,6 +561,29 @@ button:hover {
 
   .nav-list li {
     text-align: center;
+  }
+
+  .hero-socials {
+    display: none;
+  }
+
+  .nav-list .nav-socials-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-list .nav-socials-mobile a {
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.8);
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .nav-list .nav-socials-mobile a:hover {
+    transform: translateY(-3px);
+    color: #fff;
   }
 }
 

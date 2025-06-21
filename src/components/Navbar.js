@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+ import {
+   FaEnvelope,
+   FaInstagram,
+   FaSpotify,
+   FaApple,
+   FaYoutube,
+ } from 'react-icons/fa6';
 
 const links = ['HOME', 'ABOUT', 'GALLERY', 'SHOP'];
 
@@ -7,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* 1) Hamburger toggle */}
+      {/* Hamburger toggle */}
       <button
         className={`hamburger ${menuOpen ? 'open' : ''}`}
         aria-label="Toggle menu"
@@ -18,10 +25,10 @@ export default function Navbar() {
         <span className="bar bottom" />
       </button>
 
-      {/* 2) Mobile-only logo */}
+      {/* Mobile-only logo */}
       <div className="logo mobile-logo">THE ADEL GOMEZ BAND</div>
 
-      {/* 3) Desktop list (with its own logo in the middle) */}
+      {/* Desktop list (with its own logo in the middle) */}
       <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
         {links.slice(0, 2).map(label => (
           <li key={label}>
@@ -48,6 +55,47 @@ export default function Navbar() {
             </li>
           );
         })}
+
+       {/* Mobile-menu social icons */}
+       {menuOpen && (
+         <li className="nav-socials-mobile">
+           <a aria-label="Email" href="mailto:theadelgomezband@gmail.com">
+             <FaEnvelope />
+           </a>
+           <a
+             aria-label="Instagram"
+             target="_blank"
+             rel="noreferrer"
+             href="https://www.instagram.com/theadelgomezband/"
+           >
+             <FaInstagram />
+           </a>
+           <a
+             aria-label="Spotify"
+             target="_blank"
+             rel="noreferrer"
+             href="https://open.spotify.com/artist/0ZI5Qs0OqJvcl6b9gotEyS"
+           >
+             <FaSpotify />
+           </a>
+           <a
+             aria-label="Apple Music"
+             target="_blank"
+             rel="noreferrer"
+             href="https://music.apple.com/gb/artist/the-adel-gomez-band/1815975339"
+           >
+             <FaApple />
+           </a>
+           <a
+             aria-label="YouTube"
+             target="_blank"
+             rel="noreferrer"
+             href="https://www.youtube.com/@Theadelgomezband"
+           >
+             <FaYoutube />
+           </a>
+         </li>
+       )}
       </ul>
     </nav>
   );
