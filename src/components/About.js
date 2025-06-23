@@ -11,17 +11,20 @@ export default function About() {
         <div className="about-text">
           <h2>About</h2>
           <p>
-            <strong>The Adel Gomez Band</strong> is a genre-blending group currently based in Scotland, delivering a unique fusion of vintage-modern rock, funk, soul, and pop. Through their authentic lyrics and way of life, and their groovy, catchy songs, they intend to share their unique message and perspective.
+            <strong>The Adel Gomez Band</strong> is a genre-blending group currently based in Scotland, delivering a unique fusion of vintage but modern sounding rock, funk, and soul and pop. Through their authentic lyrics and way of life, their groovy and catchy songs, they share one clear message: escape the rat race, cut through life’s noise, and live like it means something.
           </p>
           <h3>Who is Adel Gomez?</h3>
           <p>
-            Singer and songwriter Adel Gomez moved to Scotland in 2019 not knowing that he was about to find himself and his real passion. He then studied full-time and earned an HND in music. He started off as a guitarist, transitioned into a singer, and began playing in pubs, eventually making that his full-time career.
+            Led by singer-songwriter Adel Gomez, he moved to Scotland in 2019 without knowing he was about to find himself and his passion. He studied full time and earned an HND in music. He started as a guitarist, transitioned to singer, and started playing in pubs, eventually making that his full time job.
           </p>
           <p>
-            The year 2022 was a turning point: a very dark episode in his life inspired him to write, not because he thought he was a songwriter, but because he needed to say something he couldn’t keep inside anymore. The songs poured out raw and honest, sometimes hopeful, sometimes heavy. For the first time, he wasn’t just playing music, he was becoming an artist. What began as survival transformed into clarity.
+            2022 was a turning point: after a dark episode in his life, Adel began writing raw, honest songs, sometimes hopeful, and sometimes heavy. He wasn´t just playing music anymore, he became an artist. Then, survival turned into clarity. To bring these tracks to life, he teamed up with his friend and musician Ivan Tolosana, forming not just a band but a community.
           </p>
           <p>
-            With friend and musician Ivan Tolosana, Adel created more than a band, they created a community: a gathering of people who want to make real music and connect with real people. For those tired of pretending and those waking up, this community is for you. Welcome to the tribe.
+            This community is for anyone who craves real music made from the soul and authentic connections. It’s for those tired of pretending, waking up to deeper meaning, and ready to break free from life’s frustrating loop.
+          </p>
+          <p>
+            We have a vision of a brighter future and strong personality. The change starts today. At the end of the day, we don’t give a f**k what people say because we know what we want and life is too short to care, we are going to make it with our people, by our side, and we are having fun along the way. Because that, is the true meaning of life. <strong>Welcome to the tribe.</strong>
           </p>
           <a
             href="https://open.spotify.com/artist/0ZI5Qs0OqJvcl6b9gotEyS?si=wrcqvAfqRXKOfo-Nqqopcg"
