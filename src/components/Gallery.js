@@ -28,11 +28,13 @@ export default function Gallery() {
 
   // PRELOAD
   useEffect(() => {
-    images.forEach(src => {
+    const prev = (index - 1 + images.length) % images.length;
+    const next = (index + 1) % images.length;
+    [images[prev], images[index], images[next]].forEach(src => {
       const img = new Image();
       img.src = src;
     });
-  }, []);
+  }, [index]);
 
   const prevSlide = () => setIndex(i => (i - 1 + images.length) % images.length);
   const nextSlide = () => setIndex(i => (i + 1) % images.length);
