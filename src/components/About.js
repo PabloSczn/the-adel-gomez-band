@@ -24,7 +24,7 @@ export default function About() {
             This community is for anyone who craves real music made from the soul and authentic connections. It’s for those tired of pretending, waking up to deeper meaning, and ready to break free from life’s frustrating loop.
           </p>
           <p>
-            We have a vision of a brighter future and strong personality. The change starts today. At the end of the day, we don’t give a f**k what people say because we know what we want and life is too short to care, we are going to make it with our people, by our side, and we are having fun along the way. Because that, is the true meaning of life. <strong>Welcome to the tribe.</strong>
+            We have a vision of a brighter future. The change starts today. At the end of the day, we don’t give a f**k what people say because we know what we want and life is too short to care, we are going to make it with our people, by our side, and we are having fun along the way. Because that, is the true meaning of life. <strong>Welcome to the tribe.</strong>
           </p>
           <a
             href="https://open.spotify.com/artist/0ZI5Qs0OqJvcl6b9gotEyS?si=wrcqvAfqRXKOfo-Nqqopcg"
