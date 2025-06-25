@@ -36,7 +36,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact">
-      <h2>Contact</h2>
+      <h2>Contact us</h2>
       <p className="contact-intro">
         We’d love to hear from you. Whether you have a question, an opportunity, or just want to say hi, drop us a message below!
       </p>
