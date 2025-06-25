@@ -88,6 +88,7 @@ export default function Contact() {
           </a>
         ))}
       </div>
+      <p className="contact-email">theadelgomezband@gmail.com</p>
     </section>
   );
 }
