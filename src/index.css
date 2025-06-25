@@ -665,6 +665,19 @@ button:hover {
   .gallery{
     height: 100vh;
   }
+
+  .contact h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+  }
+  .contact p {
+    font-size: 0.9rem;  
+  }
   .contact-socials, .contact-email {
     display: none;
   }
