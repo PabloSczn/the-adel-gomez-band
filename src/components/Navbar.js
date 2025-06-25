@@ -7,7 +7,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa6';
 
-const links = ['HOME', 'ABOUT', 'GALLERY', 'SHOP'];
+const links = ['HOME', 'ABOUT', 'SOCIALS', 'GALLERY', 'CONTACT', 'SHOP'];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ export default function Navbar() {
 
       {/* Desktop list (with its own logo in the middle) */}
       <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
-        {links.slice(0, 2).map(label => (
+        {links.slice(0, 3).map(label => (
           <li key={label}>
             {label === 'HOME' ? (
               <a href="/" onClick={handleHomeClick}>{label}</a>
@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* Desktop logo */}
         <li className="logo desktop-logo">THE ADEL GOMEZ BAND</li>
 
-        {links.slice(2).map(label => {
+        {links.slice(3).map(label => {
           const isShop = label === 'SHOP';
           const href = isShop
             ? 'https://www.etsy.com/shop/TheAdelGomezBand'

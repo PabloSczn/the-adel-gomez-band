@@ -65,9 +65,9 @@ button:hover {
 }
 
 .nav-list li a {
-  font-weight: 570;
+  font-weight: 550;
   letter-spacing: 0.07em;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
 }
 
@@ -81,6 +81,7 @@ button:hover {
   font-size: 1.6rem;
   letter-spacing: 0.15em;
   color: rgba(255,255,255,0.6);
+  text-align: center;
 }
 
 /* ============================================================= */
@@ -259,9 +260,46 @@ button:hover {
 }
 
 /* ============================================================= */
-/* ======================= 5. GALLERY ========================== */
+/* ======================= 5a. SOCIALS ========================== */
 /* ============================================================= */
-.gallery {              /* Gallery Section */
+.socials {
+  background: #0a0a0a;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.socials > h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+
+.socials-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 501;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.socials-container {
+  width: 84%;
+}
+
+
+/* ============================================================= */
+/* ======================= 5b. GALLERY ========================== */
+/* ============================================================= */
+.gallery { 
   background: #111;
   color: #fff;
   height: 100vh;
@@ -339,6 +377,127 @@ button:hover {
 .gallery-arrow:hover {
   background: rgba(255,255,255,0.4);
   transform: translateY(-3px);
+}
+
+/* ============================================================= */
+/* ======================= 5c. CONTACT ========================== */
+/* ============================================================= */
+.contact {
+  background: #0a0a0a;
+  height: 100vh;
+  color: #fff;
+  padding: 2rem;                 /* match other sections’ top padding */
+  display: flex;
+  flex-direction: column;        /* stack heading + form top-down */
+  justify-content: flex-start;   /* start at top */
+  align-items: center;           /* center horizontally */
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+  margin-top: 1rem;              /* same spacing as Socials, Gallery */
+  margin-bottom: 3rem;           /* plenty of room before form */
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+
+/* Form container */
+.contact-form {
+  width: 100%;
+  max-width: 700px;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Inputs & textarea—padding increased for a “longer” feel */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.3);
+  padding: 1rem 1.25rem;         /* taller fields */
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 8px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+  outline: none;
+}
+
+/* Submit button */
+.contact-form button {
+  justify-self: start;
+  margin-top: 7rem;
+  background: rgba(255, 255, 255, 0.25);
+  border: 3px solid #fff;
+  padding: 12px 45px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: 'proxima-nova', sans-serif;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.contact-form button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.contact-form button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.contact-intro {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 501;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #ddd;
+  max-width: 700px;   /* same max width as the form */
+}
+
+/* Prevent horizontal resize—only allow vertical */
+.contact-form textarea {
+  resize: vertical;
+  height: 150%;
+}
+
+/* Thank you message */
+.contact-thankyou {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+}
+
+.contact-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 5rem;         /* space above icons */
+  justify-content: center;
+  font-size: 1.5rem;        /* same scale as hero/footer */
+}
+
+.contact-socials a {
+  color: rgba(255,255,255,0.8);
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-socials a:hover {
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ============================================================= */
@@ -489,9 +648,13 @@ button:hover {
     border: none;
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
   }
+  .socials-container{
+    margin-top: 3.5rem;
+    width: 100%;
+  }
+
   .footer            { padding: 0.7rem 1rem; }
   .footer-socials    { gap: 1rem; }
-  
 }
 
 /* ---------- 8b. Extra-small devices (≤480 px) ---------- */
@@ -730,6 +893,7 @@ body { overflow-x: hidden; }
   }
 }
 
+/* ─────────────────── DESKTOP SIZES ──────────────────────── */
 /* ── SUPPORT FOR SHORT VIEWPORTS (e.g. 1366×768) ── */
 @media screen and (min-width: 769px) and (max-height: 800px) {
   .about {
@@ -765,8 +929,93 @@ body { overflow-x: hidden; }
   }
 }
 
+/*1280×800 (low-end)*/
+@media screen and (min-height: 600px) and (max-height: 900px) and (min-width: 1260px) and (max-width: 1300px) {
+  .hero-socials {
+    position: absolute;
+    top: 6.5rem;
+    left: 50%;
+    transform: translateX(-60%);
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    z-index: 20;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1.15rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+}
 
 
+/*1366×768 (very common)*/
+@media screen and (min-height: 748px) and (max-height: 777px) and (min-width: 1340px) and (max-width: 1388px) {
+  .hero-socials {
+    position: absolute;
+    top: 4.5rem;
+    left: 50%;
+    transform: translateX(-60%);
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    z-index: 20;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1.15rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .nav-list li a {
+    font-weight: 570;
+    letter-spacing: 0.07em;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .hero-content button {
+    margin-top: -1rem;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    height: 130%;
+  }
+
+  .contact-form button {
+    margin-top: 4rem;
+  }
+
+  .contact-socials {
+    display: none;
+  }
+}
+
+
+/* 1440 × 900 (office) */
 @media screen and (min-height: 895px) and (max-height: 905px) and (min-width: 1420px) and (max-width: 1450px) {
   .about {
     /* Let it grow and scroll if needed */
@@ -796,6 +1045,28 @@ body { overflow-x: hidden; }
     margin-top: 1rem;
     padding: 10px 30px;
     font-size: 0.9rem;
+  }
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 4rem;
+
+    margin-top: 5vh;
+    max-width: 870px;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 501;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ddd;
+  }
+  .contact-socials {
+    margin-top: 3rem;
   }
 }
 
@@ -838,32 +1109,13 @@ body { overflow-x: hidden; }
     height: 144vh;
     max-height: 870px;
   }
-}
 
-
-@media screen and (min-height: 890px) and (max-height: 910px) and (min-width: 1420px) and (max-width: 1460px) {
-  .about-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 4rem;
-
-    margin-top: 5vh;
-    max-width: 870px;
-  }
-
-  .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-weight: 501;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #ddd;
+  .contact {
+    height: 90vh;
   }
 }
 
-
+/* Wider Screens */
 @media screen and (min-height: 1580px) and (min-width: 2540px) { 
   /* make image narrower and let text take more room */
   .about-container {
@@ -909,4 +1161,155 @@ body { overflow-x: hidden; }
     height: 144vh;
     max-height: 1400px;
   }
+
+  .contact-form {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    gap: 1.5rem;
+  } 
+}
+
+
+/* ─────────────────── PHONE SIZES ──────────────────────── */
+
+/* ─────────────────── 375×667 (iPhone SE)  ──────────────────────── */
+@media screen and (min-height: 640px) and (max-height: 680px) and (min-width: 340px) and (max-width: 390px) {
+  .contact-form textarea {
+    resize: vertical;
+    height: 100%;
+  }
+
+  .contact-form button {
+    justify-self: start;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid #fff;
+    padding: 12px 45px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'proxima-nova', sans-serif;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .contact h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+  }
+  .contact p {
+    font-size: 0.9rem;  
+  }
+
+  .contact-socials {
+    display: none;
+  }
+}
+
+
+/* ─────────────────── 360 × 800 (common Android)  ──────────────────────── */
+@media screen and (min-height: 780px) and (max-height: 820px) and (min-width: 340px) and (max-width: 390px) {
+  .contact h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+  }
+  .contact p {
+    font-size: 0.9rem;  
+  }
+
+  .contact-socials {
+    display: none;
+  }
+}
+
+
+/* ─────────────────── 412 × 915 (large Androids)  ──────────────────────── */
+@media screen and (min-height: 900px) and (max-height: 930px) and (min-width: 400px) and (max-width: 420px) {
+  .contact-socials {
+    display: none;
+  }
+}
+
+/* ─────────────────── 768 × 1024 (iPad portrait)  ──────────────────────── */
+@media screen and (min-height: 1000px) and (max-height: 1040px) and (min-width: 740px) and (max-width: 780px) {
+  .gallery{
+    height: 90vh;
+  }
+
+  .socials {
+    background: #0a0a0a;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .socials > h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+  }
+
+  .socials-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 501;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ddd;
+  }
+
+}
+
+
+/* ─────────────────── 1024 × 768 (iPad landscape) ──────────────────────── */
+@media screen and (min-height: 748px) and (max-height: 788px) and (min-width: 1100px) and (max-width: 1040px) {
+  .gallery{
+    height: 90vh;
+  }
+
+  .socials {
+    background: #0a0a0a;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .socials > h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+  }
+
+  /*TO BE FIXED */
+  .socials-container{
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+  }
+
 }
