@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import {
   FaEnvelope,
   FaInstagram,
-  FaSpotify,
-  FaApple,
-  FaYoutube
 } from 'react-icons/fa6';
 
 export default function Contact() {
