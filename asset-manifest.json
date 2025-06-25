@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/the-adel-gomez-band/static/css/main.7e386570.css",
-    "main.js": "/the-adel-gomez-band/static/js/main.b6f559e0.js",
-    "static/media/gallery5.webp": "/the-adel-gomez-band/static/media/gallery5.41f346a4c425fc827ec2.webp",
-    "static/media/gallery6.webp": "/the-adel-gomez-band/static/media/gallery6.22eac48e2b85028692b9.webp",
-    "static/media/gallery4.webp": "/the-adel-gomez-band/static/media/gallery4.0d474301d4fc2a578c69.webp",
+    "main.css": "/the-adel-gomez-band/static/css/main.351877f6.css",
+    "main.js": "/the-adel-gomez-band/static/js/main.1bd94f74.js",
     "static/media/gallery1.webp": "/the-adel-gomez-band/static/media/gallery1.dd5288bd8ca6e85d8b9d.webp",
     "static/media/gallery12.webp": "/the-adel-gomez-band/static/media/gallery12.9222201c952ebb136525.webp",
-    "static/media/gallery8.webp": "/the-adel-gomez-band/static/media/gallery8.13dcff96599ddcb9dcce.webp",
     "static/media/gallery10.webp": "/the-adel-gomez-band/static/media/gallery10.fe686b1f702bf0da9dfd.webp",
-    "static/media/gallery2.webp": "/the-adel-gomez-band/static/media/gallery2.815f3026be1a1ce33aa7.webp",
+    "static/media/gallery5.webp": "/the-adel-gomez-band/static/media/gallery5.837773eae6601dbd34b1.webp",
     "static/media/gallery9.webp": "/the-adel-gomez-band/static/media/gallery9.4ba99296950718c7e98a.webp",
     "static/media/gallery11.webp": "/the-adel-gomez-band/static/media/gallery11.df99956b4ee266a84c61.webp",
     "static/media/gallery13.webp": "/the-adel-gomez-band/static/media/gallery13.56839ee86e9d642cb386.webp",
     "static/media/gallery15.webp": "/the-adel-gomez-band/static/media/gallery15.343f8727988382903eca.webp",
     "static/media/about.jpg": "/the-adel-gomez-band/static/media/about.f754d6abde571fc3d783.jpg",
     "static/media/gallery7.webp": "/the-adel-gomez-band/static/media/gallery7.5c652d3e695662a6edca.webp",
+    "static/media/gallery4.webp": "/the-adel-gomez-band/static/media/gallery4.343ac45e1aae595a4711.webp",
+    "static/media/gallery6.webp": "/the-adel-gomez-band/static/media/gallery6.1c3bd430f206dd1698af.webp",
     "static/media/gallery14.webp": "/the-adel-gomez-band/static/media/gallery14.ebfd9d1f07e342f6aca0.webp",
+    "static/media/gallery8.webp": "/the-adel-gomez-band/static/media/gallery8.6360d0d5f27e67598fd3.webp",
+    "static/media/gallery2.webp": "/the-adel-gomez-band/static/media/gallery2.e6d5d5e32d75877cdd35.webp",
     "static/media/gallery3.webp": "/the-adel-gomez-band/static/media/gallery3.8bb04d1d0d4c8cb4006a.webp",
     "static/media/logo.jpg": "/the-adel-gomez-band/static/media/logo.3a5ae8d9a6cbfe7a64e5.jpg",
     "static/media/hero-background.jpg": "/the-adel-gomez-band/static/media/hero-background.e197da270e0267a898fa.jpg",
     "index.html": "/the-adel-gomez-band/index.html",
-    "main.7e386570.css.map": "/the-adel-gomez-band/static/css/main.7e386570.css.map",
-    "main.b6f559e0.js.map": "/the-adel-gomez-band/static/js/main.b6f559e0.js.map"
+    "main.351877f6.css.map": "/the-adel-gomez-band/static/css/main.351877f6.css.map",
+    "main.1bd94f74.js.map": "/the-adel-gomez-band/static/js/main.1bd94f74.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e386570.css",
-    "static/js/main.b6f559e0.js"
+    "static/css/main.351877f6.css",
+    "static/js/main.1bd94f74.js"
   ]
 }
