@@ -90,7 +90,8 @@ button:hover {
 .hero {
   position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background-size: cover;
   background-position: center;
 }
@@ -265,7 +266,8 @@ button:hover {
 .socials {
   background: #0a0a0a;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,7 +307,8 @@ button:hover {
 .gallery { 
   background: #111;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -387,7 +390,8 @@ button:hover {
 /* ============================================================= */
 .contact {
   background: #0a0a0a;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   color: #fff;
   padding: 2rem;                 /* match other sections’ top padding */
   display: flex;
@@ -958,7 +962,7 @@ body { overflow-x: hidden; }
 }
 
 /*1280×800 (low-end)*/
-@media screen and (min-height: 600px) and (max-height: 900px) and (min-width: 1260px) and (max-width: 1300px) {
+@media screen and (min-height: 600px) and (max-height: 900px) and (min-width: 1200px) and (max-width: 1400px) {
   .hero-socials {
     position: absolute;
     top: 6.5rem;
@@ -989,11 +993,28 @@ body { overflow-x: hidden; }
   .contact-socials, .contact-email {
     display: none;
   }
+
+  /* shrink the stream button */
+  .stream-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 501;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ddd;
+  }
 }
 
 
 /*1366×768 (very common)*/
-@media screen and (min-height: 748px) and (max-height: 777px) and (min-width: 1340px) and (max-width: 1388px) {
+@media screen and (min-height: 700px) and (max-height: 900px) and (min-width: 1300px) and (max-width: 1500px) {
   .hero-socials {
     position: absolute;
     top: 4.5rem;
@@ -1034,7 +1055,7 @@ body { overflow-x: hidden; }
 
   .contact-form textarea {
     resize: vertical;
-    height: 130%;
+    height: 100%;
   }
 
   .contact-form button {
@@ -1048,7 +1069,7 @@ body { overflow-x: hidden; }
 
 
 /* 1440 × 900 (office) */
-@media screen and (min-height: 895px) and (max-height: 905px) and (min-width: 1420px) and (max-width: 1450px) {
+@media screen and (min-height: 800px) and (max-height: 999px) and (min-width: 1300px) and (max-width: 1500px) {
   .about {
     /* Let it grow and scroll if needed */
     height: auto;
@@ -1072,12 +1093,14 @@ body { overflow-x: hidden; }
   .about-text h2 { font-size: 2rem; }
   .about-text h3 { font-size: 1.5rem; }
   .about-text p  { font-size: 1rem; line-height: 1.5; }
+
   /* shrink the stream button */
   .stream-button {
     margin-top: 1rem;
     padding: 10px 30px;
     font-size: 0.9rem;
   }
+
   .about-text {
     display: flex;
     flex-direction: column;
@@ -1097,13 +1120,14 @@ body { overflow-x: hidden; }
     margin-bottom: 1rem;
     color: #ddd;
   }
+
   .contact-socials {
     margin-top: 3rem;
   }
 }
 
 /* 1920×1080 (standard full HD) */
-@media screen and (min-height: 1060px) and (max-height: 1100px) and (min-width: 1900px) and (max-width: 1940px) {
+@media screen and (min-height: 1000px) and (max-height: 1100px) and (min-width: 1900px) and (max-width: 1990px) {
   .about-text {
     display: flex;
     flex-direction: column;
@@ -1146,6 +1170,7 @@ body { overflow-x: hidden; }
     height: 90vh;
   }
 }
+
 
 /* Wider Screens */
 @media screen and (min-height: 1580px) and (min-width: 2540px) { 
