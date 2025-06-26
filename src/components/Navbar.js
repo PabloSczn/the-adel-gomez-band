@@ -18,13 +18,22 @@ export default function Navbar() {
     window.location.reload();
   };
 
+  // Close the mobile menu after clicking any link
+  const handleLinkClick = (e, isHome = false) => {
+    if (isHome) {
+      e.preventDefault();
+      handleHomeClick(e);
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       {/* Hamburger toggle */}
       <button
         className={`hamburger ${menuOpen ? 'open' : ''}`}
         aria-label="Toggle menu"
-        onClick={() => setMenuOpen(o => !o)}
+        onClick={() => setMenuOpen((open) => !open)}
       >
         <span className="bar top" />
         <span className="bar middle" />
@@ -36,12 +45,22 @@ export default function Navbar() {
 
       {/* Desktop list (with its own logo in the middle) */}
       <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
-        {links.slice(0, 3).map(label => (
+        {links.slice(0, 3).map((label) => (
           <li key={label}>
             {label === 'HOME' ? (
-              <a href="/" onClick={handleHomeClick}>{label}</a>
+              <a
+                href="/"
+                onClick={(e) => handleLinkClick(e, true)}
+              >
+                {label}
+              </a>
             ) : (
-              <a href={`#${label.toLowerCase()}`}>{label}</a>
+              <a
+                href={`#${label.toLowerCase()}`}
+                onClick={handleLinkClick}
+              >
+                {label}
+              </a>
             )}
           </li>
         ))}
@@ -49,7 +68,7 @@ export default function Navbar() {
         {/* Desktop logo */}
         <li className="logo desktop-logo">THE ADEL GOMEZ BAND</li>
 
-        {links.slice(3).map(label => {
+        {links.slice(3).map((label) => {
           const isShop = label === 'SHOP';
           const href = isShop
             ? 'https://www.etsy.com/shop/TheAdelGomezBand'
@@ -59,6 +78,7 @@ export default function Navbar() {
               <a
                 href={href}
                 {...(isShop ? { target: '_blank', rel: 'noreferrer' } : {})}
+                onClick={handleLinkClick}
               >
                 {label}
               </a>
