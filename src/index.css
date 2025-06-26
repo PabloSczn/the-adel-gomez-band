@@ -319,6 +319,7 @@ button:hover {
 
 .gallery > h2 {
   font-size: 2.5rem;
+  margin-top: -1rem;
   margin-bottom: 4rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -668,6 +669,10 @@ button:hover {
 
   .gallery{
     height: 100vh;
+  }
+
+  .gallery > h2{
+    margin-top: -5rem;
   }
 
   .contact h2 {
