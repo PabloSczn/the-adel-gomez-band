@@ -43,7 +43,7 @@ export default function Contact() {
       ) : (
         <form
           className="contact-form"
-          action="https://formspree.io/f/FORM_ID"
+          action="https://formspree.io/f/movwyaqb"
           method="POST"
           onSubmit={handleSubmit}
         >
