@@ -442,7 +442,7 @@ button:hover {
 /* Submit button */
 .contact-form button {
   justify-self: start;
-  margin-top: 7rem;
+  margin-top: 5rem;
   background: rgba(255, 255, 255, 0.25);
   border: 3px solid #fff;
   padding: 12px 45px;
@@ -477,7 +477,7 @@ button:hover {
 /* Prevent horizontal resize—only allow vertical */
 .contact-form textarea {
   resize: vertical;
-  height: 150%;
+  height: 120%;
 }
 
 /* Thank you message */
@@ -1064,7 +1064,7 @@ body { overflow-x: hidden; }
   }
 
   .contact-form button {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   .contact-socials, .contact-email {
