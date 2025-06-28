@@ -442,7 +442,7 @@ button:hover {
 /* Submit button */
 .contact-form button {
   justify-self: start;
-  margin-top: 5rem;
+  margin-top: 3rem;
   background: rgba(255, 255, 255, 0.25);
   border: 3px solid #fff;
   padding: 12px 45px;
