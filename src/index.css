@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body, html {
@@ -1398,7 +1399,7 @@ body { overflow-x: hidden; }
 }
 
 /* ─────────────────── 768 × 1024 (iPad portrait)  ──────────────────────── */
-@media screen and (min-height: 1000px) and (max-height: 1040px) and (min-width: 740px) and (max-width: 780px) {
+@media screen and (min-height: 1000px) and (max-height: 1440px) and (min-width: 740px) and (max-width: 850px) {
   .gallery{
     height: 90vh;
   }
@@ -1444,8 +1445,53 @@ body { overflow-x: hidden; }
     margin-top: 10rem;
   }
 
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 300;
+    text-align: center;
+    color: #ddd;
+  }
+
+  .about-text {
+    padding: 0 2rem;
+  }
+
+  .stream-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
+
+/* ─────────────────── 1180 × 820 (iPad Air landscape)  ──────────────────────── */
+@media screen and (min-height: 620px) and (max-height: 930px) and (min-width: 1000px) and (max-width: 1485px) {
+  .about-text p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+
+  .about-text {
+    padding: 0 1.5rem;
+  }
+
+  .hero-socials { 
+    position: absolute;
+    top: 8.5rem;
+    left: 50%;
+    transform: translateX(-60%);
+    display: flex;
+    gap: 0.9rem;
+    font-size: 1.2rem;
+    z-index: 20;
+  }
+
+  .stream-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 
 /* ─────────────────── 1024 × 1366 (iPad Pro portrait)  ──────────────────────── */
 @media screen and (min-height: 1365px) and (max-height: 1367px) and (min-width: 1023px) and (max-width: 1025px) {
