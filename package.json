@@ -1,7 +1,7 @@
 {
   "name": "the-adel-gomez-band",
   "version": "0.1.0",
-  "homepage": "https://pablosczn.github.io/the-adel-gomez-band",
+  "homepage": "https://theadelgomezband.com",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
