@@ -477,7 +477,7 @@ button:hover {
 /* Prevent horizontal resize—only allow vertical */
 .contact-form textarea {
   resize: vertical;
-  height: 120%;
+  height: 110%;
 }
 
 /* Thank you message */
