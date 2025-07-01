@@ -971,7 +971,7 @@ body { overflow-x: hidden; }
 @media screen and (min-height: 600px) and (max-height: 900px) and (min-width: 1200px) and (max-width: 1400px) {
   .hero-socials {
     position: absolute;
-    top: 6.5rem;
+    top: 6rem;
     left: 50%;
     transform: translateX(-60%);
     display: flex;
@@ -1465,7 +1465,7 @@ body { overflow-x: hidden; }
 
 
 /* ─────────────────── 1180 × 820 (iPad Air landscape)  ──────────────────────── */
-@media screen and (min-height: 620px) and (max-height: 930px) and (min-width: 1000px) and (max-width: 1485px) {
+@media screen and (min-height: 620px) and (max-height: 900px) and (min-width: 1000px) and (max-width: 1190px) {
   .about-text p {
     font-size: 0.85rem;
     line-height: 1.4;
