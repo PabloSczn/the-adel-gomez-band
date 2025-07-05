@@ -1464,6 +1464,17 @@ body { overflow-x: hidden; }
 }
 
 
+/* ─────────────────── 820 × 1180 (iPad Air portrait)  ──────────────────────── */
+@media screen and (min-height: 1160px) and (max-height: 1200px) and (min-width: 620px) and (max-width: 1020px) {
+  .hero-socials { 
+    position: absolute;
+    top: calc(90.5%);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
 /* ─────────────────── 1180 × 820 (iPad Air landscape)  ──────────────────────── */
 @media screen and (min-height: 620px) and (max-height: 900px) and (min-width: 1000px) and (max-width: 1190px) {
   .about-text p {
