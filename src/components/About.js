@@ -1,30 +1,39 @@
 import React from 'react';
-import aboutImg from '../assets/about.jpg';
+import { aboutImage } from '../data/images';
 
 export default function About() {
   return (
     <section id="about" className="about">
       <div className="about-container">
         <div className="about-image">
-          <img src={aboutImg} alt="The Adel Gomez Band" />
+          <img
+            src={aboutImage.src}
+            srcSet={aboutImage.srcSet}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            width={aboutImage.width}
+            height={aboutImage.height}
+            alt={aboutImage.alt}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="about-text">
           <h2>About</h2>
           <p>
-            <strong>The Adel Gomez Band</strong> is a genre-blending group currently based in Scotland, delivering a unique fusion of vintage but modern sounding rock, funk, soul and pop. Through their authentic lyrics and way of life, their groovy and catchy songs, they share one clear message: escape the rat race, cut through life’s noise, and live like it means something.
+            <strong>The Adel Gomez Band</strong> is a Scotland-based, genre-blending group fusing vintage and modern rock, funk, soul and pop. Through authentic lyrics, their way of life, and groovy, catchy songs, they share one clear message: escape the rat race, cut through life’s noise, and live like it means something.
           </p>
           <h3>Who is Adel Gomez?</h3>
           <p>
-            The Adel Gomez Band is led by singer-songwriter Adel Gomez.  In 2019 he moved to Scotland without knowing he was about to find himself and his passion. He studied full time and earned an HND in music. He started as a guitarist, transitioned to singer, and started playing in pubs, eventually making that his full-time job.
+            Singer-songwriter Adel Gomez moved to Scotland in 2019, where he found himself and his passion. He studied full-time and earned an HND in music, progressed from guitarist to singer, and turned playing in pubs into his full-time job.
           </p>
           <p>
-            The year 2022 was a turning point: after a dark episode in his life, Adel began writing raw, honest songs, sometimes hopeful, and sometimes heavy. He wasn´t just playing music anymore, he became an artist. Then, survival turned into clarity. To bring these tracks to life, he teamed up with his friend and musician Ivan Tolosana, forming not just a band but a community.
+            The year 2022 marked a turning point in Adel’s life. Following a difficult period, he began writing raw, honest songs that reflected both the darker and more hopeful sides of his experiences. Music became more than something he played; it became a way to express himself, make sense of his experiences, and connect with others. What began as a means of survival gradually evolved into a clearer artistic vision, laying the foundations for The Adel Gomez Band.
           </p>
           <p>
-            This community is for anyone who craves authentic connections, and real music made from the soul. It’s for those tired of pretending, waking up to deeper meaning, and ready to break free from life’s frustrating loop.
+            To bring these songs to life, Adel teamed up with his friend and musician Ivan Tolosana, forming a band and a community. It’s for anyone craving authentic connections and music from the soul, tired of pretending, waking up to deeper meaning, and ready to break free from life’s frustrating loop.
           </p>
           <p>
-            We have a vision of a brighter future. The change starts today. At the end of the day, we don’t give a f**k what people say because we know what we want and life is too short to care, we are going to make it with our people, by our side, and we are having fun along the way. Because that, is the true meaning of life. <strong>Welcome to the tribe.</strong>
+            We believe in a brighter future, and the change starts today. We don’t give a f**k what people say: we know what we want, and life is too short to care. With our people by our side, we’re going to make it and have fun along the way. That’s the true meaning of life. <strong>Welcome to the tribe.</strong>
           </p>
           <a
             href="https://open.spotify.com/artist/0ZI5Qs0OqJvcl6b9gotEyS?si=wrcqvAfqRXKOfo-Nqqopcg"

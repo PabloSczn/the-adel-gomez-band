@@ -6,15 +6,21 @@ import {
   FaApple,
   FaYoutube,
 } from 'react-icons/fa6';
-import logo from '../assets/logo.jpg';
+import { bandLogo } from '../data/images';
 
 export default function Footer() {
   return (
     <footer className="footer">
       {/* Logo */}
       <img
-        src={logo}
-        alt="The Adel Gomez Band Logo"
+        src={bandLogo.src}
+        srcSet={bandLogo.srcSet}
+        sizes="120px"
+        width={bandLogo.width}
+        height={bandLogo.height}
+        alt={bandLogo.alt}
+        loading="lazy"
+        decoding="async"
         className="footer-logo"
       />
 
@@ -25,7 +31,7 @@ export default function Footer() {
 
       {/* Social links */}
       <div className="footer-socials">
-        <a aria-label="Email" href="mailto:theadelgomezband@gmail.com">
+        <a aria-label="Email" href="mailto:hello@theadelgomezband.com">
           <FaEnvelope />
         </a>
         <a

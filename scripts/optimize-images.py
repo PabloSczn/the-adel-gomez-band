@@ -1,0 +1,158 @@
+#!/usr/bin/env python3
+"""Regenerate website image variants and their React manifest with Pillow."""
+
+from io import BytesIO
+from pathlib import Path
+
+from PIL import Image, ImageCms, ImageOps
+
+
+ROOT = Path(__file__).resolve().parents[1]
+IMAGE_DIR = ROOT / "src/assets/images"
+ORIGINAL_DIR = IMAGE_DIR / "originals"
+MANIFEST_PATH = ROOT / "src/data/images.js"
+
+PHOTOS = (
+    (
+        "studioElectricGuitar",
+        "studio-electric-guitar",
+        "Adel Gomez with an electric guitar under red and blue studio lighting",
+        (640, 1280, 1920, 2560),
+    ),
+    (
+        "studioAcousticGuitar",
+        "studio-acoustic-guitar",
+        "Adel Gomez singing with an acoustic guitar against an orange backdrop",
+        (640, 1280, 1920),
+    ),
+    (
+        "cityBeigeCoat",
+        "city-beige-coat",
+        "Adel Gomez wearing a beige coat beside a stone wall in the city",
+        (640, 1280, 1920),
+    ),
+    (
+        "tomorrowStoneColumns",
+        "tomorrow-stone-columns",
+        "Adel Gomez holding flowers beside stone columns for As Soon as Tomorrow",
+        (640, 1280, 1920),
+    ),
+    (
+        "tomorrowStationBench",
+        "tomorrow-station-bench",
+        "Adel Gomez seated on a station bench with flowers for As Soon as Tomorrow",
+        (640, 1280, 1920),
+    ),
+    (
+        "tomorrowStationStairs",
+        "tomorrow-station-stairs",
+        "Adel Gomez on a station staircase holding flowers for As Soon as Tomorrow",
+        (640, 1280, 1920),
+    ),
+    (
+        "tomorrowCityStreet",
+        "tomorrow-city-street",
+        "Adel Gomez walking along a city street with flowers for As Soon as Tomorrow",
+        (640, 1280, 1920),
+    ),
+)
+
+
+def read_srgb(path):
+    """Normalize orientation and color while leaving the original file intact."""
+    with Image.open(path) as source:
+        image = ImageOps.exif_transpose(source)
+        profile = source.info.get("icc_profile")
+        if profile:
+            image = ImageCms.profileToProfile(
+                image,
+                ImageCms.ImageCmsProfile(BytesIO(profile)),
+                ImageCms.createProfile("sRGB"),
+                outputMode="RGB",
+            )
+        else:
+            image = image.convert("RGB")
+        return image.copy()
+
+
+def write_variants(name, widths, *, lossless=False):
+    image = read_srgb(ORIGINAL_DIR / f"{name}.jpg")
+    dimensions = []
+    for width in widths:
+        height = round(image.height * width / image.width)
+        variant = image.resize((width, height), Image.Resampling.LANCZOS)
+        destination = IMAGE_DIR / f"{name}-{width}.webp"
+        variant.save(destination, "WEBP", quality=84, method=6, lossless=lossless)
+        with Image.open(destination) as check:
+            check.load()
+            if check.size != (width, height):
+                raise ValueError(f"Invalid dimensions: {destination}")
+        dimensions.append((width, height))
+        print(f"{destination.name}: {destination.stat().st_size:,} bytes", flush=True)
+    return dimensions
+
+
+def main():
+    imports = []
+    objects = []
+    for variable, name, alt, widths in PHOTOS:
+        dimensions = write_variants(name, widths)
+        for width in widths:
+            imports.append(
+                f"import {variable}{width} from '../assets/images/{name}-{width}.webp';"
+            )
+        src_set = ", ".join(f"${{{variable}{width}}} {width}w" for width in widths)
+        max_width, max_height = dimensions[-1]
+        objects.append(
+            f"const {variable} = {{\n"
+            f"  src: {variable}1280,\n"
+            f"  srcSet: `{src_set}`,\n"
+            f"  width: {max_width},\n"
+            f"  height: {max_height},\n"
+            f"  alt: '{alt}'\n"
+            "};"
+        )
+
+    logo_widths = (320, 640, 1280)
+    logo_dimensions = write_variants("band-logo", logo_widths, lossless=True)
+    for width in logo_widths:
+        imports.append(
+            f"import bandLogo{width} from '../assets/images/band-logo-{width}.webp';"
+        )
+    logo_src_set = ", ".join(f"${{bandLogo{width}}} {width}w" for width in logo_widths)
+    logo_width, logo_height = logo_dimensions[-1]
+    objects.append(
+        "export const bandLogo = {\n"
+        "  src: bandLogo640,\n"
+        f"  srcSet: `{logo_src_set}`,\n"
+        f"  width: {logo_width},\n"
+        f"  height: {logo_height},\n"
+        "  alt: 'The Adel Gomez Band'\n"
+        "};"
+    )
+    exports = (
+        "export const heroImage = studioElectricGuitar;\n"
+        "export const aboutImage = studioAcousticGuitar;\n\n"
+        "export const galleryImages = [\n"
+        "  studioElectricGuitar,\n"
+        "  studioAcousticGuitar,\n"
+        "  cityBeigeCoat,\n"
+        "  tomorrowStoneColumns,\n"
+        "  tomorrowStationBench,\n"
+        "  tomorrowStationStairs,\n"
+        "  tomorrowCityStreet\n"
+        "];\n"
+    )
+    MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
+    MANIFEST_PATH.write_text(
+        "// Generated by scripts/optimize-images.py. Original photos are not bundled.\n"
+        + "\n".join(imports)
+        + "\n\n"
+        + "\n\n".join(objects)
+        + "\n\n"
+        + exports
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   FaEnvelope,
   FaInstagram,
@@ -12,20 +12,17 @@ const links = ['HOME', 'ABOUT', 'SOCIALS', 'GALLERY', 'CONTACT', 'SHOP'];
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Handler to reload the page on Home click
-  const handleHomeClick = (e) => {
-    e.preventDefault();
-    window.location.reload();
-  };
+  useEffect(() => {
+    if (!menuOpen) return undefined;
 
-  // Close the mobile menu after clicking any link
-  const handleLinkClick = (e, isHome = false) => {
-    if (isHome) {
-      e.preventDefault();
-      handleHomeClick(e);
-    }
-    setMenuOpen(false);
-  };
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [menuOpen]);
+
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <nav className="navbar">
@@ -33,6 +30,9 @@ export default function Navbar() {
       <button
         className={`hamburger ${menuOpen ? 'open' : ''}`}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+        aria-controls="main-navigation"
+        type="button"
         onClick={() => setMenuOpen((open) => !open)}
       >
         <span className="bar top" />
@@ -44,13 +44,13 @@ export default function Navbar() {
       <div className="logo mobile-logo">THE ADEL GOMEZ BAND</div>
 
       {/* Desktop list (with its own logo in the middle) */}
-      <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
+      <ul id="main-navigation" className={`nav-list ${menuOpen ? 'open' : ''}`}>
         {links.slice(0, 3).map((label) => (
           <li key={label}>
             {label === 'HOME' ? (
               <a
-                href="/"
-                onClick={(e) => handleLinkClick(e, true)}
+                href="#home"
+                onClick={handleLinkClick}
               >
                 {label}
               </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
        {/* Mobile-menu social icons */}
        {menuOpen && (
          <li className="nav-socials-mobile">
-           <a aria-label="Email" href="mailto:theadelgomezband@gmail.com">
+           <a aria-label="Email" href="mailto:hello@theadelgomezband.com">
              <FaEnvelope />
            </a>
            <a

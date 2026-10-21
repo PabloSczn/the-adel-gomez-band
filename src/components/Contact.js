@@ -10,24 +10,24 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    const form = e.target;
+    const form = e.currentTarget;
     const data = new FormData(form);
-    const res = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' },
-    });
-    if (res.ok) {
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' },
+      });
+      if (!res.ok) throw new Error('Message delivery failed');
       setStatus('thanks');
       form.reset();
-    } else {
-      setStatus('idle');
-      alert('Oops! Something went wrong.');
+    } catch {
+      setStatus('error');
     }
   };
 
   const socialLinks = [
-    { aria: 'Email',    href: 'mailto:theadelgomezband@gmail.com', icon: <FaEnvelope /> },
+    { aria: 'Email',    href: 'mailto:hello@theadelgomezband.com', icon: <FaEnvelope /> },
     { aria: 'Instagram',href: 'https://www.instagram.com/theadelgomezband/', icon: <FaInstagram /> },
   ];
 
@@ -39,28 +39,34 @@ export default function Contact() {
       </p>
 
       {status === 'thanks' ? (
-        <p className="contact-thankyou">Thanks! We’ll be in touch.</p>
+        <p className="contact-thankyou" role="status">Thanks! We’ll be in touch.</p>
       ) : (
         <form
           className="contact-form"
           action="https://formspree.io/f/movwyaqb"
           method="POST"
           onSubmit={handleSubmit}
+          aria-busy={status === 'sending'}
         >
           <input
             type="text"
             name="name"
+            aria-label="Your Name"
+            autoComplete="name"
             placeholder="Your Name"
             required
           />
           <input
             type="email"
             name="email"
+            aria-label="Your Email Address"
+            autoComplete="email"
             placeholder="Your Email Address"
             required
           />
           <textarea
             name="message"
+            aria-label="Your Message"
             rows="8"
             placeholder="Your Message"
             required
@@ -68,6 +74,11 @@ export default function Contact() {
           <button type="submit" disabled={status === 'sending'}>
             {status === 'sending' ? 'Sending…' : 'Send Message'}
           </button>
+          {status === 'error' && (
+            <p className="contact-error" role="alert">
+              We couldn’t send your message. Please try again or email us below.
+            </p>
+          )}
         </form>
       )}
 
@@ -85,7 +96,9 @@ export default function Contact() {
           </a>
         ))}
       </div>
-      <p className="contact-email">theadelgomezband@gmail.com</p>
+      <p className="contact-email">
+        <a href="mailto:hello@theadelgomezband.com">hello@theadelgomezband.com</a>
+      </p>
     </section>
   );
 }
