@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.db8362d7.css",
-    "main.js": "/static/js/main.fa3c89a6.js",
+    "main.css": "/static/css/main.bf7209a5.css",
+    "main.js": "/static/js/main.b4ed403a.js",
     "static/media/studio-acoustic-guitar-1920.webp": "/static/media/studio-acoustic-guitar-1920.14c535652a8206cb18cc.webp",
     "static/media/tomorrow-city-street-1920.webp": "/static/media/tomorrow-city-street-1920.c7c7fe4d8bf14dc24ca3.webp",
     "static/media/tomorrow-station-stairs-1920.webp": "/static/media/tomorrow-station-stairs-1920.59b820d94d6c51520f9f.webp",
@@ -28,11 +28,11 @@
     "static/media/studio-electric-guitar-640.webp": "/static/media/studio-electric-guitar-640.bb7ea7d1e255dfbb29a9.webp",
     "static/media/band-logo-320.webp": "/static/media/band-logo-320.6834f428439c57bdb99f.webp",
     "index.html": "/index.html",
-    "main.db8362d7.css.map": "/static/css/main.db8362d7.css.map",
-    "main.fa3c89a6.js.map": "/static/js/main.fa3c89a6.js.map"
+    "main.bf7209a5.css.map": "/static/css/main.bf7209a5.css.map",
+    "main.b4ed403a.js.map": "/static/js/main.b4ed403a.js.map"
   },
   "entrypoints": [
-    "static/css/main.db8362d7.css",
-    "static/js/main.fa3c89a6.js"
+    "static/css/main.bf7209a5.css",
+    "static/js/main.b4ed403a.js"
   ]
 }
