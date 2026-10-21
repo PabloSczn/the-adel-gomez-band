@@ -1,7 +1,8 @@
 import React from 'react';
-import { FaEnvelope, FaInstagram, FaSpotify, FaApple, FaYoutube } from 'react-icons/fa6';
+import { FaEnvelope, FaInstagram, FaTiktok, FaSpotify, FaApple, FaYoutube } from 'react-icons/fa6';
 import { FaChevronDown } from 'react-icons/fa';
 import { heroImage } from '../data/images';
+import { socialLinks } from '../data/socialLinks';
 
 export default function Hero() {
   return (
@@ -19,7 +20,8 @@ export default function Hero() {
       />
       <div className="hero-socials">
         <a aria-label="Email" href="mailto:hello@theadelgomezband.com"><FaEnvelope /></a>
-        <a aria-label="Instagram" target="_blank" rel="noreferrer" href="https://www.instagram.com/theadelgomezband/"><FaInstagram /></a>
+        <a aria-label="Instagram" target="_blank" rel="noreferrer" href={socialLinks.instagram}><FaInstagram /></a>
+        <a aria-label="TikTok" target="_blank" rel="noreferrer" href={socialLinks.tiktok}><FaTiktok /></a>
         <a aria-label="Spotify" target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/0ZI5Qs0OqJvcl6b9gotEyS?si=zsJ15M9tSpGw0M53yeFwPg"><FaSpotify /></a>
         <a aria-label="Apple Music" target="_blank" rel="noreferrer" href="https://music.apple.com/gb/artist/the-adel-gomez-band/1815975339"><FaApple /></a>
         <a aria-label="YouTube" target="_blank" rel="noreferrer" href="https://www.youtube.com/@Theadelgomezband"><FaYoutube /></a>

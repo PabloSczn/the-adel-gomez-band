@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import {
   FaEnvelope,
   FaInstagram,
+  FaTiktok,
 } from 'react-icons/fa6';
+import { socialLinks } from '../data/socialLinks';
 
 export default function Contact() {
   const [status, setStatus] = useState('idle');
@@ -26,9 +28,10 @@ export default function Contact() {
     }
   };
 
-  const socialLinks = [
+  const contactLinks = [
     { aria: 'Email',    href: 'mailto:hello@theadelgomezband.com', icon: <FaEnvelope /> },
-    { aria: 'Instagram',href: 'https://www.instagram.com/theadelgomezband/', icon: <FaInstagram /> },
+    { aria: 'Instagram',href: socialLinks.instagram, icon: <FaInstagram /> },
+    { aria: 'TikTok',href: socialLinks.tiktok, icon: <FaTiktok /> },
   ];
 
   return (
@@ -84,7 +87,7 @@ export default function Contact() {
 
       {/* new social icons bar */}
       <div className="contact-socials">
-        {socialLinks.map(({ aria, href, icon }) => (
+        {contactLinks.map(({ aria, href, icon }) => (
           <a
             key={aria}
             aria-label={aria}

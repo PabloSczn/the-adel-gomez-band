@@ -2,11 +2,13 @@ import React from 'react';
 import {
   FaEnvelope,
   FaInstagram,
+  FaTiktok,
   FaSpotify,
   FaApple,
   FaYoutube,
 } from 'react-icons/fa6';
 import { bandLogo } from '../data/images';
+import { socialLinks } from '../data/socialLinks';
 
 export default function Footer() {
   return (
@@ -36,11 +38,19 @@ export default function Footer() {
         </a>
         <a
           aria-label="Instagram"
-          href="https://www.instagram.com/theadelgomezband/"
+          href={socialLinks.instagram}
           target="_blank"
           rel="noreferrer"
         >
           <FaInstagram />
+        </a>
+        <a
+          aria-label="TikTok"
+          href={socialLinks.tiktok}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaTiktok />
         </a>
         <a
           aria-label="Spotify"

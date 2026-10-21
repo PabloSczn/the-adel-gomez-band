@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import {
   FaEnvelope,
   FaInstagram,
+  FaTiktok,
   FaSpotify,
   FaApple,
   FaYoutube,
 } from 'react-icons/fa6';
+import { socialLinks } from '../data/socialLinks';
 
 const links = ['HOME', 'ABOUT', 'SOCIALS', 'GALLERY', 'CONTACT', 'SHOP'];
 
@@ -96,9 +98,17 @@ export default function Navbar() {
              aria-label="Instagram"
              target="_blank"
              rel="noreferrer"
-             href="https://www.instagram.com/theadelgomezband/"
+             href={socialLinks.instagram}
            >
              <FaInstagram />
+           </a>
+           <a
+             aria-label="TikTok"
+             target="_blank"
+             rel="noreferrer"
+             href={socialLinks.tiktok}
+           >
+             <FaTiktok />
            </a>
            <a
              aria-label="Spotify"

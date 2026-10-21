@@ -803,6 +803,13 @@ section {
   }
 }
 
+@media (max-width: 360px) {
+  .footer-socials,
+  .nav-list .nav-socials-mobile {
+    gap: 0.125rem;
+  }
+}
+
 @media (max-height: 500px) and (min-width: 769px) {
   .hero {
     min-height: 22rem;
